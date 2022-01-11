@@ -1,0 +1,170 @@
+body {
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;  
+	color: $text-color;
+    font-family: $font-family-sans-serif;
+	font-size: 16px;
+    max-width:100%;   
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul, li{
+    list-style: none; 
+    padding:0;
+    margin: 0;
+}
+
+h3{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.app-container{
+    min-height: calc(100vh - 61px);
+	display: flex;
+    flex-direction: column; 
+    //padding-top: 70px;
+}
+
+main{
+    height: 100%;
+    flex:1;
+}
+
+.aright{
+    text-align: right;
+}
+
+.color-red{
+    color: $red;
+}
+
+.color-green{
+    color: $green;
+}
+
+.visibility-hidden{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.alink{
+    font-weight: 500;
+    border-bottom: 1px solid $primary;
+    color: $primary;
+
+    &:hover{
+        border-color:$grey-medium;
+        color:$grey-medium;
+        text-decoration: none;
+    }
+}
+
+// titles
+
+h1, .main-title, .title{
+    font-weight: 800;
+    font-family: $font-family-title;
+}
+
+.main-title{
+    font-size: 52px;
+    margin-bottom: 15px;
+
+    span{
+        color: white;
+    }
+
+    @media #{$max-sm} {
+        font-size: 40px;
+        line-height: 1.3em;
+    }
+}
+
+.title{
+    font-size: 30px;
+    margin-bottom: 20px;
+
+    @media #{$max-sm} {
+        font-size: 26px;
+    }    
+}
+
+
+
+// buttons
+
+.btn-icon{
+    background: transparent;
+    border: none;
+    padding: 5px 10px;
+}
+
+.btn-primary{
+    background: $primary;
+    border-color: $primary;
+    color: white;
+
+    &:hover{
+        color: $primary;
+        border-color: $primary;
+        background: white;
+    }
+}
+
+.btn-light{
+    border-color: $primary;
+    color: $primary;
+    background: white;
+
+    &:hover{
+        background-color: $primary;
+        border-color: $primary;
+        color: white;
+    }
+}
+
+.btn-share {
+	background-image: url(../assets/icons/icon_share.svg);
+	background-repeat: no-repeat;
+	background-size: 24px 24px;
+	background-position: 15px;
+	padding-left: 45px;
+    &:hover {
+        background-color: $grey-light;
+        color:$primary;
+      }
+  }
+
+
+
+// others
+ 
+.ball-icon{
+    width: 74px;
+    height: 74px;
+    background: white;
+    padding: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 2px 2px 6px $accent;
+
+    img{
+        width: 100%;
+        height: auto;
+        max-height: 40px;
+    }
+}

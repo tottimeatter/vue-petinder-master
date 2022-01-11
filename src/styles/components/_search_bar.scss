@@ -1,0 +1,23 @@
+.search-bar {
+    position: relative;
+
+    .search-control{
+        padding-left: 45px;
+        height: 58px;
+    }
+
+    .search-button{
+        background: #fff url(../assets/icons/icon_search.svg) 0px 50% no-repeat;
+        position: absolute;
+        top: 1px;
+        left: 5px;
+        color: $grey;
+        width: 42px;
+        height: 56px;
+    }
+}
+
+
+.search-wrapper {
+	background: linear-gradient(73.24deg, $accent-light 0%, $accent 100%);
+}

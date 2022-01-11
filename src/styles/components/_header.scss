@@ -1,0 +1,115 @@
+.header {
+    width: 100%;
+    z-index: 100;
+    transition: all 0.4s ease;
+    top: 0px;
+    position: fixed;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(13, 10, 44, 0.04);  
+
+    .logo-btn{
+        padding:0;
+    }
+
+    .logo{
+        height:50px;
+        width: auto;   
+        margin-right: 20px;
+             
+        &.logo-white{
+            display: none;
+        }
+    }
+
+    &.header-home.transparent{
+        background-color: transparent;
+        box-shadow: none;
+
+        .logo{
+            &.logo-white{
+                display: block;
+            }
+            &.logo-normal{
+                display: none;
+            }
+        }
+    }
+
+    .user-details{
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+
+        .user-avatar{
+            margin-left:8px;
+            margin-right:15px;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            
+            .user-avatar-img{
+                width: 24px;
+            }
+        }
+
+        .btn-logout{
+            padding-left:0;
+            padding-right:0;
+        }
+
+        @media #{$max-sm} {
+            .user-email{
+                display: none;
+            }
+        }
+    }
+
+    .nav-right{
+        display: flex;
+        align-items: center;
+    }
+
+    .header-container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        height: 70px;
+    
+        nav{
+            align-items: center;
+            display: flex;
+        }
+        @media #{$max-md} {
+            > .btn-login{
+                display: none;
+            }
+        }
+
+        .menu-links{
+            display: flex;
+    
+            li{
+                margin-right: 15px;
+                font-weight: 500;
+    
+                a{
+                    color: black;
+    
+                    &:hover{
+                        color: $primary;
+                        text-decoration: none;
+                    }
+                }
+            }
+    
+            @media #{$max-md} {
+                display: none;
+            }
+        }
+
+    }
+}
